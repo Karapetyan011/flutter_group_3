@@ -23,6 +23,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_group_3/screens/star_wars/star_wars_page_from_planets.dart';
+import 'package:flutter_group_3/screens/star_wars/star_wars_page_from_starship.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
