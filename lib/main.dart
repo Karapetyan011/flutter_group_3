@@ -24,6 +24,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_group_3/screens/star_wars/star_wars_page_person.dart';
 import 'package:flutter_group_3/screens/star_wars/star_wars_page.dart';
+import 'package:flutter_group_3/screens/star_wars/star_wars_page_person.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
@@ -45,8 +46,8 @@ class MyApp extends StatelessWidget {
       // home: DicePage(),
       // home: ListViewPage(),
       // home: PianoApp(),
-      // home: SWPPerson(),
-      home: SWPage(),
+      home: SWPPerson(),
+      // home: SWPage(),
       // home:FlutterStreamBuilder()
       //home: StreamBuilderRealTimeClock(),
       // home: GridViewCount(),
