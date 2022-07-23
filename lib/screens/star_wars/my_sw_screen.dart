@@ -24,22 +24,23 @@ class SwHomePage extends StatefulWidget{
 
 }
 class SwHomePageState extends State<SwHomePage>{
-  dynamic name;
-  int height = 0;
-  int mass = 0;
-  dynamic hair_color;
-  dynamic skin_color;
-  dynamic eye_color;
-  dynamic birth_year;
-  dynamic gender;
-  dynamic homeworld;
+  String? name;
+  String? height;
+  String? mass;
+  String? hair_color;
+  String? skin_color;
+  String? eye_color;
+  String? birth_year;
+  String? gender;
+  String? homeworld;
   dynamic films;
   dynamic species;
+  String? created;
+  String? edited;
+  String? url;
   dynamic vehicles;
   dynamic starships;
-  dynamic created;
-  dynamic edited;
-  dynamic url;
+
 
   @override
   void didChangeDependencies(){
@@ -261,9 +262,9 @@ class SwHomePageState extends State<SwHomePage>{
    return await MyStarWarsService().getDataFromSWApi().then((value) async{
      if(value != null){
        setState((){
-         name = value!.name!;
-         height = value!.height!.toInt();
-         mass = value!.mass!.toInt();
+        name = value!.name!;
+         height = value!.height!;
+         mass = value!.mass!;
          birth_year = value!.birth_year!;
          eye_color = value!.eye_color!;
          films = value!.films!;
@@ -271,19 +272,17 @@ class SwHomePageState extends State<SwHomePage>{
          hair_color = value!.hair_color!;
          homeworld = value!.homeworld!;
          skin_color = value!.skin_color!;
-          species = value!.species!;
-         vehicles = value!.vehcles!;
-          starships = value!.starsips!;
-          created = value!.created!;
-          edited = value!.edited!;
-          url = value!.url!;
+         species = value!.species!;
+         created = value!.created!;
+         edited = value!.edited!;
+         url = value!.url!;
 
        });
        return value;
      }
    },
-   ).catchError((_){
+   );/*.catchError((_){
      throw Exception("Exception is caught");
-   });
+   });*/
   }
 }

@@ -2,8 +2,8 @@ import 'package:flutter_group_3/core/model/models_constants/my_info_keys.dart';
 
 class People2{
   String? name;
-  int? height;
-  int? mass;
+  String? height;
+  String? mass;
   String? hair_color;
   String? skin_color;
   String? eye_color;
@@ -14,9 +14,9 @@ class People2{
   dynamic species;
   dynamic vehicles;
   dynamic starships;
-  dynamic created;
-  dynamic edited;
-  dynamic url;
+  String? created;
+  String? edited;
+  String? url;
 
   People2({
     this.name,
@@ -53,6 +53,6 @@ class People2{
     starships: json[MyPeopleInfoKeys.starships],
     created: json[MyPeopleInfoKeys.created],
     edited: json[MyPeopleInfoKeys.edited],
-    url: json[MyPeopleInfoKeys.url]
+      url: json[MyPeopleInfoKeys.url]
   );
 }
