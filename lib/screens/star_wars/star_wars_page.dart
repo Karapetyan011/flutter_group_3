@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<dynamic> fetchSWAPIData() async {
     return await StarWarsService().fetchDataFromSWApi().then(
-          (value) async {
+      (value) async {
         if (value != null) {
           setState(() {
             _count = value!.count!.toInt();

@@ -1,4 +1,4 @@
-import 'package:flutter_group_3/core/model/models_constants/person_info_keys.dart';
+import 'models_constants/person_info_keys.dart';
 
 class Person {
   String? name;
@@ -10,10 +10,10 @@ class Person {
   String? birth_year;
   String? gender;
   String? homeworld;
-  List<String>? films;
-  List<String>? species;
-  List<String>? vehicles;
-  List<String>? starships;
+  List<dynamic>? films;
+  List<dynamic>? species;
+  List<dynamic>? vehicles;
+  List<dynamic>? starships;
   String? created;
   String? edited;
   String? url;

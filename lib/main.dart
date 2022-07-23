@@ -23,7 +23,7 @@
 // import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_group_3/screens/star_wars/star_wars_page_person.dart';
-import 'package:flutter_group_3/screens/star_wars/star_wars_page.dart';
+// import 'package:flutter_group_3/screens/star_wars/star_wars_page.dart';
 import 'package:flutter_group_3/screens/star_wars/star_wars_page_person.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

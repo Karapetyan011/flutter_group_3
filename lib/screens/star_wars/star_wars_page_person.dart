@@ -32,9 +32,19 @@ class _MyHomePagePersonState extends State<MyHomePagePerson> {
   dynamic _birth_year;
   dynamic _gender;
   dynamic _homeworld;
+  dynamic _films;
+  dynamic _species;
+  dynamic _vehicles;
+  dynamic _starships;
+  dynamic _created;
+  dynamic _edited;
+  dynamic _url;
 
   @override
-  void initState() {}
+  void initState() {
+    fetchSWAPIDataPerson().then((person) => person);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -199,6 +209,125 @@ class _MyHomePagePersonState extends State<MyHomePagePerson> {
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 12.0,
+                ),
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.yellow,
+                  child: Text(
+                    'Response films is: \n\n $_films',
+                    style: const TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 12.0,
+                ),
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.red,
+                  child: Text(
+                    'Response species is: \n\n $_species',
+                    style: const TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 12.0,
+                ),
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.green,
+                  child: Text(
+                    'Response vehicles is: \n\n $_vehicles',
+                    style: const TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 12.0,
+                ),
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.yellow,
+                  child: Text(
+                    'Response starships is: \n\n $_starships',
+                    style: const TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 12.0,
+                ),
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.red,
+                  child: Text(
+                    'Response created is: \n\n $_created',
+                    style: const TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 12.0,
+                ),
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.green,
+                  child: Text(
+                    'Response edited is: \n\n $_edited',
+                    style: const TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 12.0,
+                ),
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.yellow,
+                  child: Text(
+                    'Response url is: \n\n $_url',
+                    style: const TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -214,12 +343,19 @@ class _MyHomePagePersonState extends State<MyHomePagePerson> {
             _name = person!.name!;
             _height = person!.height!;
             _mass = person!.mass!;
-            _hair_color = person!.hair_color;
-            _skin_color = person!.skin_color;
-            _eye_color = person!.eye_color;
-            _birth_year = person!.birth_year;
-            _homeworld = person!.homeworld;
-            _gender = person!.gender;
+            _hair_color = person!.hair_color!;
+            _skin_color = person!.skin_color!;
+            _eye_color = person!.eye_color!;
+            _birth_year = person!.birth_year!;
+            _homeworld = person!.homeworld!;
+            _gender = person!.gender!;
+            _films = person!.films!;
+            _species = person!.species!;
+            _vehicles = person!.vehicles!;
+            _starships = person!.starships!;
+            _created = person!.created!;
+            _edited = person!.edited!;
+            _url = person!.url!;
           });
           return person;
         }

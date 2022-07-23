@@ -15,7 +15,7 @@ class StarWarsService {
     /** https://swapi.dev/api/people */
     final _uri = Uri.https(
       baseUrl, // swapi.dev
-      endPoint,// api/people
+      endPoint, // api/people
     ); // https://swapi.dev/api/people
 
     final response = await http.get(
@@ -37,26 +37,23 @@ class StarWarsService {
 }
 
 class StarWarsServicePerson {
-  get http => null;
-
   Future<dynamic> fetchDataFromSWApi() async {
     const endPoint = EndPoint.person;
     const baseUrl = APIConstants.baseUrl;
 
-    final _uri = Uri.https(
+    final uri = Uri.https(
       baseUrl,
       endPoint,
     );
 
     final response = await http.get(
-      _uri,
+      uri,
     );
 
     if (response.statusCode == 200) {
       var responseBody = jsonDecode(
         response.body,
       );
-
 
       final person = Person.fromjson(responseBody);
       return person;
