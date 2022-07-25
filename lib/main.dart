@@ -22,16 +22,15 @@
 /// Created by HrAnT
 // import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_group_3/screens/star_wars/star_wars_page_person.dart';
-// import 'package:flutter_group_3/screens/star_wars/star_wars_page.dart';
-import 'package:flutter_group_3/screens/star_wars/star_wars_page_person.dart';
+import 'package:flutter_group_3/screens/list_view_screen/list_view_people_name.dart';
+// import 'package:flutter_group_3/screens/list_view_screen/list_view_page.dart';
+import 'package:flutter_group_3/screens/star_wars/star_wars_page.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     const MyApp(),
   );
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({
     Key? key,
@@ -46,8 +45,9 @@ class MyApp extends StatelessWidget {
       // home: DicePage(),
       // home: ListViewPage(),
       // home: PianoApp(),
-      home: SWPPerson(),
+      // home: SWPPerson(),
       // home: SWPage(),
+      home: ListViewPeopleName(),
       // home:FlutterStreamBuilder()
       //home: StreamBuilderRealTimeClock(),
       // home: GridViewCount(),

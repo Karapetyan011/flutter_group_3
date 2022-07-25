@@ -40,6 +40,7 @@ class _MyHomePagePersonState extends State<MyHomePagePerson> {
   dynamic _edited;
   dynamic _url;
 
+
   @override
   void initState() {
     fetchSWAPIDataPerson().then((person) => person);

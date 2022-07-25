@@ -5,5 +5,5 @@ abstract class EndPoint {
   static const species = 'api/species';
   static const starships = 'api/starships';
   static const vehicles = 'api/vehicles';
-  static const person = 'api/people/2';
+  static const person = 'api/people/5';
 }
