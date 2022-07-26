@@ -13,7 +13,7 @@ class CustomContainerForPerson extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
+      padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 15.0),
       child: Column(
         children: [
           Container(
@@ -21,12 +21,12 @@ class CustomContainerForPerson extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: Colors.green.withOpacity(0.1),
+                  color: Colors.green.withOpacity(0.6),
                   blurRadius: 5,
-                  offset: const Offset(8, 10), // changes position of shadow
+                  offset: const Offset(4, 4), // changes position of shadow
                 ),
               ],
-              gradient:  LinearGradient(
+              gradient: LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
                 colors: [
@@ -45,14 +45,14 @@ class CustomContainerForPerson extends StatelessWidget {
               children: [
                 const Icon(
                   Icons.account_circle,
-                  color: Colors.white,
-                  size: 80.0,
+                  color: Colors.white70,
+                  size: 30.0,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(0.0),
                   child: Text(
                       style: const TextStyle(
-                          color: Colors.white,
+                          color: Colors.white70,
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold),
                       "name  = $personName"),
@@ -61,7 +61,7 @@ class CustomContainerForPerson extends StatelessWidget {
                   padding: const EdgeInsets.all(10.0),
                   child: Text(
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: Colors.white70,
                         fontSize: 18.0,
                       ),
                       "mass  = $mass"),

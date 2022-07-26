@@ -55,7 +55,6 @@ class _SwapiDemoState extends State<_SwapiDemo> {
       List data = decodedResponse['results'];
       for (var element in data) {
         jsonResults!.add(PeopleModel.fromJson(element));
-        // print(jsonResults![]);
       }
     });
   }
@@ -63,13 +62,21 @@ class _SwapiDemoState extends State<_SwapiDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+
+      backgroundColor:
+        Colors.green.withOpacity(0.1),
+
+
+
       appBar: AppBar(
-        elevation: 14,
-        backgroundColor: Colors.green.shade900,
-        centerTitle: true,
-        title: const Text(
-          'Swapi Person API Name',
+        title: const Text('Stars wars people'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                end: Alignment.topRight,
+                colors: <Color>[Colors.black, Colors.green.shade900]),
+          ),
         ),
       ),
       body: Column(
@@ -92,12 +99,9 @@ class _SwapiDemoState extends State<_SwapiDemo> {
                   shrinkWrap: true,
                   padding:
                       const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
+
                   itemBuilder: (context, index) {
                     var data = jsonResults![index];
-                    // for (var element in jsonResults!){
-                    //   print(element);
-                    // };
-
                     return Padding(
                       padding: const EdgeInsets.only(top: 8.0),
                       child: CustomContainerForPerson(
@@ -105,13 +109,7 @@ class _SwapiDemoState extends State<_SwapiDemo> {
                         mass: data.mass!,
                       ),
                     );
-                  }
-
-                  // return Text(
-                  //   data.name!,
-                  //   style: const TextStyle(color: Colors.black, fontSize: 25),
-                  // );
-                  ),
+                  }),
             ),
         ],
       ),
