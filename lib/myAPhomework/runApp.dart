@@ -53,7 +53,6 @@ class _SwapiDemoState extends State<_SwapiDemo> {
 
     setState(() {
       List data = decodedResponse['results'];
-
       for (var element in data) {
         jsonResults!.add(PeopleModel.fromJson(element));
       }
@@ -63,9 +62,14 @@ class _SwapiDemoState extends State<_SwapiDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green.withOpacity(0.1),
+
+      backgroundColor:
+        Colors.green.withOpacity(0.1),
+
+
+
       appBar: AppBar(
-        title: const Text('List of Star Wars Persons'),
+        title: const Text('Stars wars people'),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -95,6 +99,7 @@ class _SwapiDemoState extends State<_SwapiDemo> {
                   shrinkWrap: true,
                   padding:
                       const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
+
                   itemBuilder: (context, index) {
                     var data = jsonResults![index];
                     return Padding(
@@ -102,10 +107,6 @@ class _SwapiDemoState extends State<_SwapiDemo> {
                       child: CustomContainerForPerson(
                         personName: data.name!,
                         mass: data.mass!,
-                        birthYear: data.birthYear!,
-                        height: data.height!,
-                        gender: data.gender!,
-                        // count: data.count!,
                       ),
                     );
                   }),
