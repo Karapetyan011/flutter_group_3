@@ -62,12 +62,7 @@ class _SwapiDemoState extends State<_SwapiDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      backgroundColor:
-        Colors.green.withOpacity(0.1),
-
-
-
+      backgroundColor: Colors.green.withOpacity(0.1),
       appBar: AppBar(
         title: const Text('Stars wars people'),
         flexibleSpace: Container(
@@ -99,7 +94,6 @@ class _SwapiDemoState extends State<_SwapiDemo> {
                   shrinkWrap: true,
                   padding:
                       const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
-
                   itemBuilder: (context, index) {
                     var data = jsonResults![index];
                     return Padding(
@@ -107,6 +101,9 @@ class _SwapiDemoState extends State<_SwapiDemo> {
                       child: CustomContainerForPerson(
                         personName: data.name!,
                         mass: data.mass!,
+                        height: data.height!,
+                        birthYear: data.birthYear!,
+                        gender: data.gender!,
                       ),
                     );
                   }),

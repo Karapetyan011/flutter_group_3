@@ -100,7 +100,7 @@ class CustomContainerForPerson extends StatelessWidget {
                   child: Text(
                       style: const TextStyle(
                         color: Colors.white70,
-                        fontSize: 20.0,
+                        fontSize: 18.0,
                       ),
                       "gender: $gender"),
                 ),
