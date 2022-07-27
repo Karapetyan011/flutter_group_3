@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
 class CustomContainerForPerson extends StatelessWidget {
-  const CustomContainerForPerson({
+  CustomContainerForPerson({
     Key? key,
+    // required this.next,
     required this.personName,
     required this.mass,
+    // required this.count,
   }) : super(key: key);
 
+  // final String next;
   final String personName;
   final String mass;
+
+  // final String count;
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +53,15 @@ class CustomContainerForPerson extends StatelessWidget {
                   color: Colors.white70,
                   size: 30.0,
                 ),
+                // Padding(
+                //   padding: const EdgeInsets.all(20.0),
+                //   child: Text(
+                //       style: const TextStyle(
+                //         color: Colors.white70,
+                //         fontSize: 18.0,
+                //       ),
+                //       "count  = $count"),
+                // ),
                 Padding(
                   padding: const EdgeInsets.all(0.0),
                   child: Text(
@@ -55,7 +69,7 @@ class CustomContainerForPerson extends StatelessWidget {
                           color: Colors.white70,
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold),
-                      "name  = $personName"),
+                      "name: $personName"),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -64,7 +78,7 @@ class CustomContainerForPerson extends StatelessWidget {
                         color: Colors.white70,
                         fontSize: 18.0,
                       ),
-                      "mass  = $mass"),
+                      "mass: $mass"),
                 ),
               ],
             ),
