@@ -3,23 +3,12 @@ import 'package:flutter/material.dart';
 class CustomContainerForPerson extends StatelessWidget {
   const CustomContainerForPerson({
     Key? key,
-    // required this.next,
     required this.personName,
     required this.mass,
-    required this.birthYear,
-    required this.height,
-    required this.gender,
-    // required this.count,
   }) : super(key: key);
 
-  // final String next;
   final String personName;
   final String mass;
-  final String height;
-  final String birthYear;
-  final String gender;
-
-  // final String count;
 
   @override
   Widget build(BuildContext context) {
@@ -57,16 +46,16 @@ class CustomContainerForPerson extends StatelessWidget {
                 const Icon(
                   Icons.account_circle,
                   color: Colors.white70,
-                  size: 50.0,
+                  size: 30.0,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(0.0),
                   child: Text(
                       style: const TextStyle(
                           color: Colors.white70,
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold),
-                      "name: $personName"),
+                      "name  = $personName"),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -75,34 +64,7 @@ class CustomContainerForPerson extends StatelessWidget {
                         color: Colors.white70,
                         fontSize: 18.0,
                       ),
-                      "mass: $mass"),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                      style: const TextStyle(
-                        color: Colors.white70,
-                        fontSize: 18.0,
-                      ),
-                      "height: $height"),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                      style: const TextStyle(
-                        color: Colors.white70,
-                        fontSize: 18.0,
-                      ),
-                      "birthYear: $birthYear"),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                      style: const TextStyle(
-                        color: Colors.white70,
-                        fontSize: 20.0,
-                      ),
-                      "gender: $gender"),
+                      "mass  = $mass"),
                 ),
               ],
             ),
