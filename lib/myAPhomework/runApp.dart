@@ -40,7 +40,6 @@ class _SwapiDemoState extends State<_SwapiDemo> {
   void initState() {
     getPeopleData();
     super.initState();
-
   }
 
   List<PeopleModel>? jsonResults = [];
@@ -53,15 +52,10 @@ class _SwapiDemoState extends State<_SwapiDemo> {
         jsonDecode(utf8.decode(response.bodyBytes));
 
     setState(() {
-
       List data = decodedResponse['results'];
-
       for (var element in data) {
-
         jsonResults!.add(PeopleModel.fromJson(element));
-
       }
-
     });
   }
 
@@ -107,7 +101,9 @@ class _SwapiDemoState extends State<_SwapiDemo> {
                       child: CustomContainerForPerson(
                         personName: data.name!,
                         mass: data.mass!,
-                        // count: data.count!,
+                        height: data.height!,
+                        birthYear: data.birthYear!,
+                        gender: data.gender!,
                       ),
                     );
                   }),
