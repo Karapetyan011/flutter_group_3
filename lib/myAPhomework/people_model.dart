@@ -1,4 +1,6 @@
 class PeopleModel {
+  String? next;
+  int? count;
   String? name;
   String? height;
   String? mass;
@@ -18,23 +20,27 @@ class PeopleModel {
 
   PeopleModel(
       {this.name,
-        this.height,
-        this.mass,
-        this.hairColor,
-        this.skinColor,
-        this.eyeColor,
-        this.birthYear,
-        this.gender,
-        this.homeworld,
-        this.films,
-        this.species,
-        this.vehicles,
-        this.starships,
-        this.created,
-        this.edited,
-        this.url});
+      this.next,
+      this.count,
+      this.height,
+      this.mass,
+      this.hairColor,
+      this.skinColor,
+      this.eyeColor,
+      this.birthYear,
+      this.gender,
+      this.homeworld,
+      this.films,
+      this.species,
+      this.vehicles,
+      this.starships,
+      this.created,
+      this.edited,
+      this.url});
 
   PeopleModel.fromJson(Map<String, dynamic> json) {
+    next = json['next'];
+    count = json['count'];
     name = json['name'];
     height = json['height'];
     mass = json['mass'];
