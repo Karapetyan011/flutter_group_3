@@ -64,7 +64,7 @@ class _SwapiDemoState extends State<_SwapiDemo> {
     return Scaffold(
       backgroundColor: Colors.green.withOpacity(0.1),
       appBar: AppBar(
-        title: const Text('Stars wars people'),
+        title: const Text('List of Star Wars Persons'),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
