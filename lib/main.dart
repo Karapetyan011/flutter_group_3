@@ -22,8 +22,7 @@
 /// Created by HrAnT
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_group_3/screens/star_wars/star_wars_page_from_planets.dart';
-import 'package:flutter_group_3/screens/star_wars/star_wars_page_from_starship.dart';
+import 'package:flutter_group_3/screens/dice_game_screen/my_dice_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,7 +45,8 @@ class MyApp extends StatelessWidget {
       // home: DicePage(),
       // home: ListViewPage(),
       // home: PianoApp(),
-      home: SWPage(),
+      home: MyDicePage(),
+      // home: SWPage(),
       // home:FlutterStreamBuilder()
       //home: StreamBuilderRealTimeClock(),
       // home: GridViewCount(),
