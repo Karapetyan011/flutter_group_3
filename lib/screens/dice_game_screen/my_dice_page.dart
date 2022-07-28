@@ -13,6 +13,8 @@ class _MyDicePageState extends State<MyDicePage> {
   int leftDiceNumber = 1;
   int rightDiceNumber = 1;
 
+  var sum = 0;
+
   void changeDiceFace() {
     setState(() {
       leftDiceNumber = Random().nextInt(6) + 1;
@@ -20,10 +22,25 @@ class _MyDicePageState extends State<MyDicePage> {
     });
   }
 
+  void sumchangeDiceFace() {
+    setState(() {
+      var givenSum = leftDiceNumber + rightDiceNumber;
+      sum += givenSum;
+      print(sum);
+    });
+  }
+
+  void resetSum() {
+    setState(() {
+      sum = 0;
+      print(sum);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('My Dice Game'),
         flexibleSpace: Container(
@@ -32,23 +49,41 @@ class _MyDicePageState extends State<MyDicePage> {
               begin: Alignment.bottomCenter,
               end: Alignment.topRight,
               colors: <Color>[
-                Colors.black,
-                Colors.grey.shade600,
+                Colors.grey.shade700,
+                Colors.grey.shade900,
               ],
             ),
           ),
         ),
       ),
-    body: Center(
-        child: Row(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Expanded(
+            SizedBox(
+              height: 50,
+
+
+              child: Container(
+                child: Text(
+                  'Total number: $sum',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 250,
+              height: 250,
               child: ElevatedButton(
                 onPressed: () {
                   changeDiceFace();
+                  sumchangeDiceFace();
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.grey.shade900,
+                  primary: Colors.black,
                 ),
                 child: Image.asset(
                   'assets/images/dice$leftDiceNumber.png',
@@ -57,17 +92,32 @@ class _MyDicePageState extends State<MyDicePage> {
               ),
             ),
             //Get students to create the second die as a challenge
-            Expanded(
+            SizedBox(
+              width: 250,
+              height: 250,
               child: ElevatedButton(
                 onPressed: () {
                   changeDiceFace();
+                  sumchangeDiceFace();
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.grey.shade900,
+                  primary: Colors.black,
                 ),
                 child: Image.asset(
                   'assets/images/dice$rightDiceNumber.png',
                   color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 100,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () {
+                  resetSum();
+                },
+                child: const Text(
+                  'reset',
                 ),
               ),
             ),
