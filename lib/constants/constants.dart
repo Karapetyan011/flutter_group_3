@@ -14,3 +14,9 @@ const List<GridItemComponent> myCustomList = <GridItemComponent>[
 ];
 
 const kBlue = Color(0xff1d9bf0);
+
+
+// Email & Password Patterns
+const String kEmailPattern = r'^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]';
+const String kPasswordPattern =
+    r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
