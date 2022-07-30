@@ -31,7 +31,6 @@ class ShadowButton extends StatelessWidget {
       child: SizedBox(
         width: double.infinity,
         child: NeumorphicButton(
-          duration: const Duration(milliseconds: 500),
           onPressed: mOnPressed,
           style: NeumorphicStyle(
             shape: NeumorphicShape.flat,
