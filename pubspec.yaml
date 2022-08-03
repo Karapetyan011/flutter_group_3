@@ -15,7 +15,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.5
+  cupertino_icons: ^1.0.2
 
   # Этот пакет содержит набор высокоуровневых функций и классов, упрощающих использование ресурсов HTTP.
   # Он мультиплатформенный и поддерживает мобильные устройства, настольные компьютеры и браузеры.
@@ -32,7 +32,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.1
+  flutter_lints: ^2.0.0
 
 flutter:
 
@@ -41,14 +41,7 @@ flutter:
 
 
   assets:
-  - assets/images/
-
-
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
+    - assets/images/
 
   # fonts:
   #   - family: Schyler
