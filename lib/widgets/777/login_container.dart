@@ -24,7 +24,7 @@ class LoginContainer extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 28.0),
             child: Container(
-              height: MediaQuery.of(context).size.height / 2,
+              height: MediaQuery.of(context).size.height / 2.0,
               decoration: const BoxDecoration(
                 boxShadow: [
                   BoxShadow(

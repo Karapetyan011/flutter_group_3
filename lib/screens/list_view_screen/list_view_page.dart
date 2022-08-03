@@ -8,7 +8,7 @@ class ListViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade50,
+      backgroundColor: const Color(0xFFE2AFEA),
       appBar: AppBar(
         centerTitle: true,
         elevation: 12.0,
