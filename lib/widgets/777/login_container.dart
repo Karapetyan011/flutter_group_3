@@ -7,12 +7,15 @@ import 'login_btn.dart';
 import 'login_password_text_field.dart';
 import 'login_username_text_field.dart';
 
+
+final formKey = GlobalKey<FormState>();
+
 class LoginContainer extends StatelessWidget {
   const LoginContainer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final formKey = GlobalKey<FormState>();
+
 
     return Scaffold(
       body: Center(
@@ -48,34 +51,8 @@ class LoginContainer extends StatelessWidget {
                           size: 80.0,
                         ),
                         const SizedBox(height: 32.0),
-                        Form(
-                          key: formKey,
-                          child: Column(
-                            children: [
-                              const LoginUsernameTextField(),
-                              const LoginPasswordTextField(),
-                              LoginButton(
-                                mFormKey: formKey,
-                              )
-                            ],
-                          ),
-                        ),
-                        ShadowButton(
-                          'Flip Card',
-                          mColor: Colors.greenAccent.shade700,
-                          mFontSize: 18,
-                          mTextColor: Colors.white,
-                          mFontWeight: FontWeight.bold,
-                          mOnPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    const CustomFlipCardsContainer(),
-                              ),
-                            );
-                          },
-                        ),
+                        _buildForm(),
+                        _loginBtn(context),
                       ],
                     ),
                   ),
@@ -85,6 +62,40 @@ class LoginContainer extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildForm(){
+    return  Form(
+      key: formKey,
+      child: Column(
+        children: [
+          const LoginUsernameTextField(),
+          const LoginPasswordTextField(),
+          LoginButton(
+            mFormKey: formKey,
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget _loginBtn(BuildContext context){
+    return ShadowButton(
+      'Flip Card',
+      mColor: Colors.greenAccent.shade700,
+      mFontSize: 18,
+      mTextColor: Colors.white,
+      mFontWeight: FontWeight.bold,
+      mOnPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+            const CustomFlipCardsContainer(),
+          ),
+        );
+      },
     );
   }
 }
