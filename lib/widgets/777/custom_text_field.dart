@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextField extends StatefulWidget {
   final String? mValidateEmptyMsg, mValidateInvalidMsg, mRegExp, mHintText;
   final TextEditingController? mController;
   final Function()? mOnPressed;
   final Function(String?)? mOnSaved;
   final int? mMaxLength;
   final TextInputType? mTextInputType;
-  final bool mVisibility;
+  bool mVisibility;
 
-  const CustomTextField(
+   CustomTextField(
       {Key? key,
       this.mController,
       this.mValidateEmptyMsg,
@@ -21,9 +21,15 @@ class CustomTextField extends StatelessWidget {
       this.mTextInputType,
       this.mHintText,
       this.mVisibility = false,
-      this.mOnPressed})
+      this.mOnPressed,
+      })
       : super(key: key);
 
+  @override
+  State<CustomTextField> createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     double tmp = MediaQuery.of(context).size.height / 2;
@@ -33,27 +39,27 @@ class CustomTextField extends StatelessWidget {
       padding: const EdgeInsets.only(top: 16.0),
       child: TextFormField(
         focusNode: myFocusNode,
-        obscureText: mVisibility,
+        obscureText: widget.mVisibility,
         validator: (value) {
           if (value!.isEmpty) {
-            return mValidateEmptyMsg;
+            return widget.mValidateEmptyMsg;
           }
-          if (!RegExp(mRegExp!).hasMatch(value)) {
-            return mValidateInvalidMsg;
+          if (!RegExp(widget.mRegExp!).hasMatch(value)) {
+            return widget.mValidateInvalidMsg;
           }
           return null;
         },
-        onSaved: mOnSaved,
+        onSaved: widget.mOnSaved,
         obscuringCharacter: '*',
         textAlign: TextAlign.left,
-        maxLength: mMaxLength,
+        maxLength: widget.mMaxLength,
         onChanged: (String change) {},
-        controller: mController,
+        controller: widget.mController,
         maxLengthEnforcement: MaxLengthEnforcement.truncateAfterCompositionEnds,
         enableSuggestions: false,
         autocorrect: false,
         cursorColor: Colors.grey,
-        keyboardType: mTextInputType,
+        keyboardType: widget.mTextInputType,
         // inputFormatters: <TextInputFormatter>[
         //   FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),],
         style: const TextStyle(
@@ -76,20 +82,26 @@ class CustomTextField extends StatelessWidget {
           ),
           fillColor: Colors.white,
           filled: true,
-          hintText: mHintText,
+          hintText: widget.mHintText,
           hintStyle: const TextStyle(color: Colors.grey, fontSize: 16),
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 24.0, vertical: 5.0),
-          suffixIcon: mOnPressed != null
+          suffixIcon: widget.mOnPressed != null
               ? IconButton(
                   icon: Icon(
-                      mVisibility ? Icons.visibility_off : Icons.visibility),
+                      widget.mVisibility ? Icons.visibility_off : Icons.visibility),
                   color: Colors.grey,
-                  onPressed: mOnPressed,
+                  onPressed: mChangeState,
                 )
               : null,
         ),
       ),
     );
+  }
+
+  void mChangeState (){
+    setState(() {
+      widget.mVisibility = !widget.mVisibility;
+    });
   }
 }
