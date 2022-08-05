@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_group_3/screens/navigation/home.dart';
-import 'package:flutter_group_3/screens/navigation/my_home_screen.dart';
+import 'package:flutter_group_3/screens/animation_screens/my_animation.dart';
+import 'package:flutter_group_3/screens/animation_screens/my_tabs.dart';
+
 
 void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget{
@@ -16,7 +17,11 @@ class MyApp extends StatelessWidget{
       //home: const MyDice(),
       //home: const MyGridViewBuilder(),
       //home: const GridScreen(),
-      home: const MyHomeScreen(),
+      //home: const MyHomeScreen(),
+      //home: const MyFlipCard(),
+      //home: const LogInContainer(),
+      //home: const MyTabExample(),
+      home: const MyAnimation(),
     );
   }
 }
