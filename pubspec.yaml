@@ -27,6 +27,10 @@ dependencies:
 
   flutter_neumorphic: ^3.2.0
 
+  flutter_staggered_animations:
+    git:
+      url: https://github.com/tonoian/flutter_staggered_animations
+
   # Компонент, обеспечивающий анимацию флип-карты. Его можно использовать для скрытия и отображения деталей продукта.
   flip_card: ^0.6.0
 

@@ -104,6 +104,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.2.0"
+  flutter_staggered_animations:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "247b407144da436aa534b2743fb1470877742f66"
+      url: "https://github.com/tonoian/flutter_staggered_animations"
+    source: git
+    version: "1.0.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -122,7 +131,7 @@ packages:
       name: http
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.13.4"
+    version: "0.13.5"
   http_parser:
     dependency: transitive
     description:
@@ -220,7 +229,7 @@ packages:
       name: path_provider_windows
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.1"
   platform:
     dependency: transitive
     description:

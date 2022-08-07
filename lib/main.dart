@@ -23,6 +23,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_group_3/screens/animation_screens/animation_manager.dart';
+import 'package:flutter_group_3/screens/dice_game_screen/dice_page.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
@@ -40,8 +41,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: MyCustomApp(),
-      home: AnimationManager(),
-      // home: DicePage(),
+      // home: AnimationManager(),
+      home: DicePage(),
       // home: ListViewPage(),
       // home: PianoApp(),
       // home: SWPage(),
