@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 
+import '../web_view_screen/demo_for_web_view_screen.dart';
 import 'animated_align_demo.dart';
+import 'animated_builder_demo.dart';
 import 'animation_container_demo.dart';
 
 class AnimationManager extends StatefulWidget {
@@ -19,6 +21,7 @@ class _AnimationManagerState extends State<AnimationManager> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+
           title: const Text(
             'My Custom Animations',
             style: TextStyle(color: Colors.black),
@@ -31,8 +34,8 @@ class _AnimationManagerState extends State<AnimationManager> {
             tabs: [
               Tab(text: 'Animation Container'),
               Tab(text: 'Animated Align'),
-              Tab(text: 'Animation Container'),
-              Tab(text: 'Animated Align'),
+              Tab(text: 'Web View'),
+              Tab(text: 'Animated Builder'),
             ],
           ),
         ),
@@ -40,8 +43,11 @@ class _AnimationManagerState extends State<AnimationManager> {
           children: [
             AnimationContainerDemo(),
             AnimatedAlignDemo(),
-            AnimationContainerDemo(),
-            AnimatedAlignDemo(),
+            DemoForWebViewScreen(
+              mUrl:
+              'https://flutter.dev/?gclid=CjwKCAjw9qiTBhBbEiwAp-GE0WKd9gg79IvhUuBSFFiVFTk4iT_okqNqwk9x4iuRJelh2rLC-y_YWhoCwlYQAvD_BwE&gclsrc=aw.ds',
+            ),
+            AnimatedBuilderDemo(),
           ],
         ),
       ),
