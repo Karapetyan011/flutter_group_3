@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'my_align_animation.dart';
+import '../web_view_screen/my_webview_screen.dart';
 import 'my_animated_container2.dart';
 import 'my_animation_container.dart';
+import 'my_heart_animation.dart';
 
 class MyTabExample extends StatefulWidget{
   const MyTabExample({Key? key}) : super(key: key);
@@ -18,37 +19,28 @@ class MyTabExampleState extends State<MyTabExample> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-            onPressed: (){
-              Navigator.pop(context);
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: Colors.blue,
-            ),
+          backgroundColor: Colors.white,
+          title:const Text('My Tabs', style: TextStyle(color: Colors.orange),
           ),
-          backgroundColor: Colors.red,
-          title: const Text('Tab Example',
-            style: TextStyle(color: Colors.white54, fontSize: 20.0),
-          ),
+
           centerTitle: true,
-          elevation: 13.0,
+          elevation: 10.0,
           bottom: const TabBar(
-            labelColor: Colors.white,
+            labelColor: Colors.blue,
             tabs: [
-              Tab(text: 'Ball',),
-              Tab(text: 'Color Box',),
-              Tab(text: 'Resized Box',),
-              Tab(text: 'Color',),
+             Tab(text: "Color Animation"),
+              Tab(text: 'Web View'),
+              Tab(text: 'Star'),
+              Tab(text: 'SizeBox'),
             ],
           ),
         ),
-        body: const TabBarView(
+        body:  const TabBarView(
           children: [
-            MyAlignAnimation(),
             MyAnimatedCont(),
-            MyAnimatedContainer(),
-            MyAnimatedCont(),
+            MyWebViewScreen(myUrl: 'https://www.digitalocean.com/community/tags/flutter'),
+            MyHeartAnimation(),
+            MyAnimatedContainer()
           ],
         ),
       ),
