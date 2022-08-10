@@ -22,7 +22,8 @@
 /// Created by HrAnT
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_group_3/screens/animation_screens/animation_manager.dart';
+import 'package:flutter_group_3/screens/web_view_screen/demo_for_web_view_screen.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: MyCustomApp(),
-      home: AnimationManager(),
+      // home: AnimationManager(),
       // home: DicePage(),
       // home: ListViewPage(),
       // home: PianoApp(),
@@ -52,6 +53,7 @@ class MyApp extends StatelessWidget {
       // home: GridViewBuilder(),
       // home: GridViewExtent(),
       // home: LoginContainer(),
+      // home: DemoForWebViewScreen (),
     );
   }
 }
