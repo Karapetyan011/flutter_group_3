@@ -26,6 +26,12 @@ dependencies:
   # Компонент, обеспечивающий анимацию флип-карты. Его можно использовать для скрытия и отображения деталей продукта.
   flip_card: ^0.6.0
 
+  # A Flutter plugin that provides a WebView widget.
+  # On iOS the WebView widget is backed by a WKWebView; On Android the WebView widget is backed by a WebView.
+  #                Android	  iOS
+  #Support	  SDK   20+	      9.0+
+  webview_flutter: ^3.0.2
+
 
 
 dev_dependencies:
