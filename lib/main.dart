@@ -22,7 +22,7 @@
 /// Created by HrAnT
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_group_3/screens/web_view_screen/demo_for_web_view_screen.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
