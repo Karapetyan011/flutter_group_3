@@ -23,6 +23,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_group_3/screens/animation_screens/animation_manager.dart';
+import 'package:flutter_group_3/screens/dice_game_screen/dice_page.dart';
+import 'package:flutter_group_3/screens/list_view_screen/list_view_page.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
