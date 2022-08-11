@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+// Rotate Animation
+// => 1 --- initState ---
+// => 2 --- CurvedAnimation ---
+// => 3 --- Tween ---
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -9,23 +14,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Animation Page',
+      title: 'Animation Page 1',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const AnimationPage(),
+      home: const FirstAnimationPage(),
     );
   }
 }
 
-class AnimationPage extends StatefulWidget {
-  const AnimationPage({Key? key}) : super(key: key);
+class FirstAnimationPage extends StatefulWidget {
+  const FirstAnimationPage({Key? key}) : super(key: key);
 
   @override
-  State<AnimationPage> createState() => _AnimationPageState();
+  State<FirstAnimationPage> createState() => _FirstAnimationPageState();
 }
 
-class _AnimationPageState extends State<AnimationPage>
+class _FirstAnimationPageState extends State<FirstAnimationPage>
     with SingleTickerProviderStateMixin {
   late AnimationController animController;
   late Animation<double> animation;
