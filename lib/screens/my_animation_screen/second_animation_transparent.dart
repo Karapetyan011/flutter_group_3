@@ -25,8 +25,7 @@ class EyeImg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200,
-      height: 200,
+      width: MediaQuery.of(context).size.width,
       child: Image.network('https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg'),
     );
   }
@@ -46,6 +45,7 @@ class _SecondAnimationPageState extends State<SecondAnimationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('Animation Opacity'),
       ),
       body: Center(

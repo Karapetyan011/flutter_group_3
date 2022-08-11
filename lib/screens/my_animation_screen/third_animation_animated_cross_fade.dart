@@ -52,6 +52,7 @@ class _ThirdAnimationPageState extends State<ThirdAnimationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('AnimatedCrossFade'),
       ),
       body: Center(

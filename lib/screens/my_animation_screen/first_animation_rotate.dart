@@ -70,6 +70,10 @@ class _FirstAnimationPageState extends State<FirstAnimationPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text('Rotate Animation',),
+      ),
       body: Transform.rotate(
         angle: animation.value,
         child: Container(
