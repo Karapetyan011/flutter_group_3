@@ -27,7 +27,7 @@ class _AnimationContainerDemoState extends State<AnimationContainerDemo> {
             });
           },
           child: AnimatedContainer(
-            height: _toggle ? 150 : 400,
+            height: _toggle ? 150 : 300,
             width: _toggle ? 150 : 250,
             decoration: BoxDecoration(
               color: _toggle ? Colors.blue : Colors.pink,

@@ -24,6 +24,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_group_3/screens/animation_screens/animation_manager.dart';
 import 'package:flutter_group_3/screens/dice_game_screen/dice_page.dart';
+import 'package:flutter_group_3/screens/grid_view_screen/grid_view_builder.dart';
+import 'package:flutter_group_3/screens/grid_view_screen/grid_view_count/grid_view_count.dart';
+import 'package:flutter_group_3/screens/grid_view_screen/grid_view_extent.dart';
+import 'package:flutter_group_3/screens/list_view_screen/list_view_page.dart';
+import 'package:flutter_group_3/screens/star_wars/star_wars_page.dart';
+import 'package:flutter_group_3/widgets/777/login_container.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
@@ -40,9 +46,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: MyCustomApp(),
+      home: MyCustomApp(),
       // home: AnimationManager(),
-      home: DicePage(),
+      // home: DicePage(),
       // home: ListViewPage(),
       // home: PianoApp(),
       // home: SWPage(),

@@ -21,7 +21,6 @@ class _AnimationManagerState extends State<AnimationManager> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-
           title: const Text(
             'My Custom Animations',
             style: TextStyle(color: Colors.black),
@@ -39,13 +38,13 @@ class _AnimationManagerState extends State<AnimationManager> {
             ],
           ),
         ),
-        body:  const TabBarView(
+        body: const TabBarView(
           children: [
             AnimationContainerDemo(),
             AnimatedAlignDemo(),
             DemoForWebViewScreen(
               mUrl:
-              'https://flutter.dev/?gclid=CjwKCAjw9qiTBhBbEiwAp-GE0WKd9gg79IvhUuBSFFiVFTk4iT_okqNqwk9x4iuRJelh2rLC-y_YWhoCwlYQAvD_BwE&gclsrc=aw.ds',
+                  'https://flutter.dev/?gclid=CjwKCAjw9qiTBhBbEiwAp-GE0WKd9gg79IvhUuBSFFiVFTk4iT_okqNqwk9x4iuRJelh2rLC-y_YWhoCwlYQAvD_BwE&gclsrc=aw.ds',
             ),
             AnimatedBuilderDemo(),
           ],

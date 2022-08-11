@@ -1,4 +1,5 @@
 /// Created by
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedBuilderDemo extends StatefulWidget {
@@ -22,7 +23,7 @@ class _AnimatedBuilderDemoState extends State<AnimatedBuilderDemo>
       vsync: this,
       duration: const Duration(milliseconds: 2000),
     );
-    _starAnimation = Tween(begin: 2.0, end: 400.0).animate(CurvedAnimation(
+    _starAnimation = Tween(begin: 2.0, end: 250.0).animate(CurvedAnimation(
         curve: Curves.linear, parent: _starAnimationController));
 
     _starAnimationController.addStatusListener((AnimationStatus status) {
@@ -52,15 +53,15 @@ class _AnimatedBuilderDemoState extends State<AnimatedBuilderDemo>
             height: 10,
           ),
           SizedBox(
-            height: 200,
-            width: 200,
+            height: 250,
+            width: 250,
             child: AnimatedBuilder(
               animation: _starAnimationController,
               builder: (context, child) {
                 return Center(
                   child: Center(
                     child: Icon(
-                      Icons.star,
+                      CupertinoIcons.heart_circle_fill,
                       color: Colors.red,
                       size: _starAnimation.value,
                     ),
@@ -72,7 +73,6 @@ class _AnimatedBuilderDemoState extends State<AnimatedBuilderDemo>
           const SizedBox(
             height: 10,
           ),
-
           ElevatedButton(
             onPressed: () {
               toggle = !toggle;

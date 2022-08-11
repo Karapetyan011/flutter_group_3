@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_group_3/screens/web_view_screen/web_view_page.dart';
 
-
 class DemoForWebViewScreen extends StatelessWidget {
   final String mUrl;
 
