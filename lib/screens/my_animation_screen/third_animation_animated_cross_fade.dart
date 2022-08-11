@@ -56,7 +56,7 @@ class _ThirdAnimationPageState extends State<ThirdAnimationPage> {
       ),
       body: Center(
         child: AnimatedCrossFade(
-          duration: const Duration(milliseconds: 1000),
+          duration: const Duration(milliseconds: 500),
           firstChild: const FaceEyeImg(),
           secondChild: const BibEyeImg(),
           crossFadeState: _showFirstChild
