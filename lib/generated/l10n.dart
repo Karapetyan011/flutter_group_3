@@ -49,6 +49,26 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `FLUTTER INTL: APP BAR TITTLE`
+  String get app_bar_title {
+    return Intl.message(
+      'FLUTTER INTL: APP BAR TITTLE',
+      name: 'app_bar_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `FLUTTER INTL: MAIN TITLE`
+  String get main_title {
+    return Intl.message(
+      'FLUTTER INTL: MAIN TITLE',
+      name: 'main_title',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
