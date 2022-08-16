@@ -46,3 +46,7 @@ app.*.map.json
 /android/app/release
 
 /lib/test_demo.dart
+
+
+
+/lib/flutter_book

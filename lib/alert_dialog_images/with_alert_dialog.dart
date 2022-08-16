@@ -52,7 +52,7 @@ class MyTabBar extends StatelessWidget {
                 mainAxisSpacing: 20.0,
                 children: List.generate(
                   images.length,
-                  (index) {
+                      (index) {
                     return AnimationConfiguration.staggeredGrid(
                       position: index,
                       columnCount: 3,
@@ -62,13 +62,14 @@ class MyTabBar extends StatelessWidget {
                           delay: const Duration(milliseconds: 500),
                           duration: const Duration(milliseconds: 1000),
                           child: InkWell(
-                            onTap: () => showGeneralDialog(
-                              context: context,
-                              pageBuilder: (BuildContext context, a1, a2) =>
-                              dialog(context, images[index]),
-                              transitionDuration:
+                            onTap: () =>
+                                showGeneralDialog(
+                                  context: context,
+                                  pageBuilder: (BuildContext context, a1, a2) =>
+                                      dialog(context, images[index]),
+                                  transitionDuration:
                                   const Duration(milliseconds: 300),
-                            ),
+                                ),
                             child: Image.asset(images[index]),
                           ),
                         ),
@@ -87,7 +88,7 @@ class MyTabBar extends StatelessWidget {
 }
 
 
-Widget dialog (BuildContext context, String imagePath) {
+Widget dialog(BuildContext context, String imagePath) {
   return AlertDialog(
     insetPadding: const EdgeInsets.all(10.0),
     contentPadding: EdgeInsets.zero,
