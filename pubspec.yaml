@@ -71,6 +71,9 @@ dependencies:
   # Не все методы поддерживаются на всех платформах.
   path_provider: ^2.0.11
 
+  # Плагин Flutter для одновременного воспроизведения нескольких аудиофайлов, работает на Android, iOS, macOS и в WEB.
+  audioplayers: ^0.20.1
+
 
 
 
@@ -86,6 +89,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/audio/
 
   # fonts:
   #   - family: Schyler
