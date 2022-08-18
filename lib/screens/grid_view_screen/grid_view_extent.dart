@@ -35,6 +35,7 @@ class _MyGridScreenState extends State<MyGridScreen> {
           children: <Widget>[
             Container(
               padding:  EdgeInsets.zero,
+              color: Colors.yellow,
               child: const Center(
                 child: Text(
                   'First',
@@ -43,32 +44,31 @@ class _MyGridScreenState extends State<MyGridScreen> {
                   ),
                 ),
               ),
-              color: Colors.yellow,
             ),
             Container(
               padding: const EdgeInsets.all(8),
+              color: Colors.blue,
               child: const Text('Second', style: TextStyle(fontSize: 20)),
-              color: Colors.blue,
             ),
             Container(
               padding: const EdgeInsets.all(8),
+              color: Colors.blue,
               child: const Text('Third', style: TextStyle(fontSize: 20)),
-              color: Colors.blue,
             ),
             Container(
               padding: const EdgeInsets.all(8),
+              color: Colors.yellow,
               child: const Text('Four', style: TextStyle(fontSize: 20)),
-              color: Colors.yellow,
             ),
             Container(
               padding: const EdgeInsets.all(8),
+              color: Colors.yellow,
               child: const Text('Fifth', style: TextStyle(fontSize: 20)),
-              color: Colors.yellow,
             ),
             Container(
               padding: const EdgeInsets.all(8),
-              child: const Text('Six', style: TextStyle(fontSize: 20)),
               color: Colors.blue,
+              child: const Text('Six', style: TextStyle(fontSize: 20)),
             ),
           ],
         ),

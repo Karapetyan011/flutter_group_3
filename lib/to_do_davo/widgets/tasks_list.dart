@@ -1,5 +1,4 @@
 ///Created by Davo
-
 import 'package:flutter/material.dart';
 import 'package:flutter_group_3/to_do_davo/widgets/task_tile.dart';
 import 'package:provider/provider.dart';

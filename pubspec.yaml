@@ -54,11 +54,11 @@ dependencies:
 
   # dio_json_serializable
   dio: ^4.0.6
-  json_annotation: ^4.5.0
+  json_annotation: ^4.6.0
   # TERMINAL COMMAND FOR RUN BUILD_RUNNER
   # [flutter pub run build_runner build]
-  build_runner: ^2.1.10
-  json_serializable: ^6.2.0
+  build_runner: ^2.2.0
+  json_serializable: ^6.3.1
 
   # Alice network debugger…
   # HTTP-инспектор для Flutter.
@@ -72,7 +72,7 @@ dependencies:
   path_provider: ^2.0.11
 
   # Плагин Flutter для одновременного воспроизведения нескольких аудиофайлов, работает на Android, iOS, macOS и в WEB.
-  audioplayers: ^0.20.1
+  audioplayers: ^1.0.1
 
 
 

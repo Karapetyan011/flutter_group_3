@@ -14,18 +14,17 @@ class TasksScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
-        decoration:  const BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight,
-              colors: [
-                Colors.white,
-                Colors.white,
-                Colors.white,
-                Colors.white,
-              ],
-            )
-        ),
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+          colors: [
+            Colors.black,
+            Colors.black,
+            Colors.black,
+
+          ],
+        )),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
@@ -38,22 +37,23 @@ class TasksScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-
-                   Text(
-                    'Правит',
-                    style: TextStyle(
-                      color: Colors.green.shade700,
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
+                  //
+                  //  Text(
+                  //   'Правит',
+                  //   style: TextStyle(
+                  //     color: Colors.green.shade700,
+                  //     fontSize: 24.0,
+                  //     fontWeight: FontWeight.w700,
+                  //   ),
+                  // ),
                   const SizedBox(
                     height: 10.0,
                   ),
 
-                   Text(
+                  Text(
                     'Заметки',
                     style: TextStyle(
+
                       color: Colors.green.shade700,
                       fontSize: 50.0,
                       fontWeight: FontWeight.w700,
@@ -72,20 +72,16 @@ class TasksScreen extends StatelessWidget {
             Expanded(
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Colors.green.shade900,
-
-                        Colors.white,
-                      ],
-                    )
-                ),
-                child: const TasksList(
-
-                ),
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [
+                    Colors.green.shade900,
+                    Colors.white,
+                  ],
+                )),
+                child: const TasksList(),
               ),
             ),
           ],

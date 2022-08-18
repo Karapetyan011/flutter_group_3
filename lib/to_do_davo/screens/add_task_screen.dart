@@ -15,22 +15,25 @@ class AddTaskScreen extends StatelessWidget {
       color: const Color(0xff757575),
       child: Container(
         padding: const EdgeInsets.all(20.0),
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(60.0),
-            topRight: Radius.circular(0.0),
-          ),
+        decoration:  BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Colors.green.shade900,
+                Colors.white,
+              ],
+            )
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             const Text(
-              'Add ',
+              ' добавить новую заметку ',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 30.0,
-                color: Colors.blue,
+                fontSize: 20.0,
+                color: Colors.white,
               ),
             ),
             TextField(
@@ -43,15 +46,16 @@ class AddTaskScreen extends StatelessWidget {
             ElevatedButton(
               style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(Colors.purple),
+                    MaterialStateProperty.all(Colors.green.shade900),
               ),
               onPressed: () {
                 Provider.of<TaskProvider>(context, listen: false).addTask(newTaskTitle!);
                 // Navigator.pop(context);
               },
               child: const Text(
-                'Add',
+                'добавить',
                 style: TextStyle(
+                  fontSize: 20.0,
                   color: Colors.white,
                 ),
               ),
