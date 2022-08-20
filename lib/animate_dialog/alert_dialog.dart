@@ -26,11 +26,17 @@ class TestPage extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          color: Colors.grey,
+          color: Colors.blue,
           textColor: (Colors.white),
           onPressed: () {
             testAlert(context);
           },
+          child: const Text(
+            'Push me!!!',
+            style: TextStyle(
+              fontSize: 22,
+            ),
+          ),
         ),
       ),
     );

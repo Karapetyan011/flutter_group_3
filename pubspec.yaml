@@ -38,6 +38,35 @@ dependencies:
   flutter_neumorphic: ^3.2.0
 
   provider: ^6.0.3
+  # Плагин Flutter для поиска часто используемых мест в файловой системе. Поддерживает Android, iOS, Linux, macOS и Windows.
+  # Не все методы поддерживаются на всех платформах.
+  path_provider: ^2.0.11
+
+  audioplayers: ^0.20.1
+
+  pinch_zoom: ^1.0.0
+
+  #   ** MOCKY **
+  # API Mocks for Free
+  # Не ждите, пока серверная часть будет готова, создавайте пользовательские
+  # ответы API с помощью Mocky и сразу приступайте к работе над своим приложением.
+  # LINK [ https://designer.mocky.io/design ]
+
+  # dio_json_serializable
+
+  dio: ^4.0.6
+  json_annotation: ^4.5.0
+  # TERMINAL COMMAND FOR RUN BUILD_RUNNER
+  # [flutter pub run build_runner build]
+  build_runner: ^2.1.10
+  json_serializable: ^6.2.0
+
+  # Alice network debugger…
+  # HTTP-инспектор для Flutter.
+  # Самое интересное в Алисе то, что вы просматриваете ее интерфейс прямо в своем приложении.url_launcher:
+  # Нет настольного приложения или отдельной консоли для просмотра запросов.Каждый HTTP-запрос регистрируется и
+  # отображается через пользовательский интерфейс, доступный в вашем приложении Flutter.
+  alice: ^0.2.5
 
   flutter_staggered_animations:
     git:
@@ -72,6 +101,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/icons/
+    - assets/audio/
 
   # fonts:
   #   - family: Schyler

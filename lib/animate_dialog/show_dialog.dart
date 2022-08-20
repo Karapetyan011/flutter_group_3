@@ -28,7 +28,7 @@ class MyStateWidget extends StatelessWidget {
               (_dialogBuilder),
             );
           },
-          child: const Text('Open Dialog'),
+          child: const Text('Open Dialog', style: TextStyle(fontSize: 24),),
         ),
       ),
     );

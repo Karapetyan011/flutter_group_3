@@ -7,9 +7,3 @@ void main() {
     const MaterialApp(home: Page1()),
   );
 }
-
-
-
-
-
-

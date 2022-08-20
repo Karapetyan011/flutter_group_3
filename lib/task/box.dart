@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MaterialApp(home: Boxes()));
 }
-class TextColor{
-
-}
 
 class Boxes extends StatelessWidget {
   const Boxes({Key? key}) : super(key: key);
@@ -112,7 +109,9 @@ class Boxes extends StatelessWidget {
   }
 }
 
-// class Box extends StatelessWidget {
+// class Boxes extends StatelessWidget {
+//   const Boxes({Key? key}) : super(key: key);
+//
 //   // const Box({Key? key}) : super(key: key);
 //
 //   @override
