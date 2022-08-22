@@ -1,0 +1,12 @@
+{
+  "language": "en",
+  "weatherDescription": "Weather Description",
+  "feelsLike": "Feels Like",
+  "wind": "Wind",
+  "humidity": "Humidity",
+  "pressure": "Pressure",
+  "speed_km_h": "km/h",
+  "sunrise": "Sunrise",
+  "sunset": "Sunset",
+  "changeLocation": "Change Location"
+}

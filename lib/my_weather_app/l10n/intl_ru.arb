@@ -1,0 +1,12 @@
+{
+  "language": "ru",
+  "weatherDescription": "Описание погоды",
+  "feelsLike": "Ощущается как",
+  "wind": "Ветер",
+  "humidity": "Влажность",
+  "pressure": "Давление",
+  "speed_km_h": "Км/ч",
+  "sunrise": "Восход солнца",
+  "sunset": "Заход солнца",
+  "changeLocation": "Изменить Локацию"
+}

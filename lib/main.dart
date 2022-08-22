@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: MyCustomApp(),
-      home: AnimationManager(),
+      // home: AnimationManager(),
       // home: DicePage(),
       // home: ListViewPage(),
       // home: PianoApp(),
