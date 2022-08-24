@@ -18,6 +18,8 @@ class MyApp extends StatefulWidget {
 class MyAppState extends State<MyApp> {
   final items = List<String>.generate(20, (i) => 'Item ${i + 1}');
 
+  // ['Item 1','Item 2', ...... 'Item 20']
+
   @override
   Widget build(BuildContext context) {
     const title = 'Dismissing Items';
@@ -48,12 +50,14 @@ class MyAppState extends State<MyApp> {
                 });
 
                 // Then show a snackbar.
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(content: Text('$item dismissed')));
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    dismissDirection: DismissDirection.down,
+                    content: Text('$item dismissed')));
               },
               // Show a red background as the item is swiped away.
               background: Container(color: Colors.red),
               child: ListTile(
+                leading: const Icon(Icons.accessibility_new),
                 title: Text(item),
               ),
             );
