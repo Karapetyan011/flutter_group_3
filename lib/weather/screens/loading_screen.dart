@@ -6,7 +6,7 @@ import '../services/location.dart';
 import '../services/networking.dart';
 import 'location_screen.dart';
 
-const apiKey = 'afcec00465f74e236bfc6f05abd24b78';
+const apiKey = 'd790eb160cc9fda46db45d4f5796e5e7';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key? key}) : super(key: key);
@@ -59,8 +59,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return const Scaffold(
       body: Center(
         child: SpinKitCubeGrid(
-          color: Colors.greenAccent,
-          size: 100.0,
+          duration: Duration(milliseconds: 1500),
+          color: Colors.white,
+          size: 150.0,
         ),
       ),
     );
