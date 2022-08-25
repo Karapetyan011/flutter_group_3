@@ -112,6 +112,18 @@ dependencies:
   # ответы API с помощью Mocky и сразу приступайте к работе над своим приложением.
   # LINK [ https://designer.mocky.io/design ]
 
+  material_design_icons_flutter: ^5.0.6996
+
+  google_fonts:
+
+  pinch_zoom: ^1.0.0
+
+  intl: ^0.17.0
+
+  flutter_staggered_animations:
+    git:
+      url: https://github.com/tonoian/flutter_staggered_animations
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
