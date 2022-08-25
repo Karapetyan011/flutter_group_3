@@ -54,7 +54,7 @@ class _LocationScreenState extends State<LocationScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: const AssetImage('assets/images/location_background 2.jpg'),
+            image: const AssetImage('assets/images/city_background.jpg'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
                 Colors.white.withOpacity(0.8), BlendMode.dstATop),
@@ -76,7 +76,8 @@ class _LocationScreenState extends State<LocationScreen> {
                     },
                     child: const Icon(
                       Icons.near_me,
-                      size: 50.0,
+                      size: 40.0,
+                      color: Colors.white,
                     ),
                   ),
                   TextButton(
@@ -97,7 +98,8 @@ class _LocationScreenState extends State<LocationScreen> {
                     },
                     child: const Icon(
                       Icons.location_city,
-                      size: 50.0,
+                      size: 40.0,
+                      color: Colors.white,
                     ),
                   ),
                 ],

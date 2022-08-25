@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import 'location.dart';
 import 'networking.dart';
 
@@ -51,13 +53,13 @@ class WeatherModel {
 
   String getMessage(int temp) {
     if (temp > 25) {
-      return 'It\'s 🍦 time';
+      return '🍦';
     } else if (temp > 20) {
-      return 'Time for shorts and 👕';
+      return '👕';
     } else if (temp < 10) {
-      return 'You\'ll need 🧣 and 🧤';
+      return '🧤';
     } else {
-      return 'Bring a 🧥 just in case';
+      return '';
     }
   }
 }

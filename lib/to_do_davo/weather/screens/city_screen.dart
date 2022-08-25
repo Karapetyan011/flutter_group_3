@@ -35,6 +35,7 @@ class _CityScreenState extends State<CityScreen> {
                   child: const Icon(
                     Icons.arrow_back_ios,
                     size: 20.0,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -42,7 +43,7 @@ class _CityScreenState extends State<CityScreen> {
                 padding: const EdgeInsets.all(20.0),
                 child: TextField(
                   style: const TextStyle(
-                    color: Colors.red,
+                    color: Colors.black,
                   ),
                   decoration: kTextFieldInputDecoration,
                   onChanged: (newValue) {
