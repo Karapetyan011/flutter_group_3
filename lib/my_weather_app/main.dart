@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_group_3/my_weather_app/screens/home_page.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
-import '../animations/main.dart';
 import 'generated/l10n.dart';
 import 'models/location_provider.dart';
 
@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => LocationProvider(),
       child: MaterialApp(
+        theme: ThemeData.dark(),
         debugShowCheckedModeBanner: false,
         localizationsDelegates: const [
           S.delegate,
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         ],
         supportedLocales: S.delegate.supportedLocales,
         title: 'Weather App Provider',
-        home: const HomePage(),
+        home: const MyWeatherHomePage(),
       ),
     );
   }

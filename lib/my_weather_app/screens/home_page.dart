@@ -8,14 +8,14 @@ import '../widgets/center_additional_info.dart';
 import '../widgets/select_location.dart';
 import '../widgets/top_main_info.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class MyWeatherHomePage extends StatefulWidget {
+  const MyWeatherHomePage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<MyWeatherHomePage> createState() => _MyWeatherHomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _MyWeatherHomePageState extends State<MyWeatherHomePage> {
   WeatherApiClient client = WeatherApiClient();
   Weather? data;
 
